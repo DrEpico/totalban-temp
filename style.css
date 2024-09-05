@@ -438,35 +438,136 @@ section.changelog {
     margin: 3px 0;
     transition: 0.4s;
 }
+/* Hide the burger menu by default for all screen sizes */
+.navbar .burger {
+    display: none;
+}
 
+/* Styles for viewport width above 768px */
+@media screen and (min-width: 769px) {
+    .navbar .pages {
+        display: flex;
+        flex-direction: row;
+        margin-right: 3rem;
+        border-right: 1px solid var(--static7);
+    }
+
+    .navbar .nav {
+        padding: 28px 18px;
+        border-left: 1px solid var(--static7);
+    }
+}
+
+/* Styles for viewport width 768px and below */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .logo {
+    .navbar .logo {
         flex: 1;
     }
 
-    .hamburger-menu {
-        display: flex;
+    .navbar .burger {
+        display: block; /* Show the burger menu */
+        order: 2; /* This ensures the burger stays on the right */
     }
 
-    .pages {
+    .navbar .pages {
         display: none;
         width: 100%;
         flex-direction: column;
         border-right: none;
+        order: 3; /* This ensures the pages appear below the logo and burger */
+        margin-right: 0;
     }
 
-    .pages.active {
+    .navbar .pages.active {
         display: flex;
     }
 
-    .nav {
+    .navbar .nav {
         padding: 15px;
         border-left: none;
         border-top: 1px solid var(--static7);
     }
 }
+
+/* .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--text);
+    margin: 3px 0;
+    transition: 0.4s;
+} */
   
+/* From Uiverse.io by Cevorob */ 
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    margin: auto 10px auto 10px;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: var(--text);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
