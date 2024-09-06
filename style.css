@@ -118,6 +118,9 @@ body {
     padding: 0;
     background-color: var(--background);
     color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes the full height of the viewport */
 }
 
 .leftcolumn {
@@ -142,6 +145,7 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem;
+    flex: 1;
 }
 
 main::after {
@@ -203,19 +207,15 @@ section p {
 } */
 
 footer {
-    position: fixed;
-    min-height: 60px;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 90%; 
     margin: 0 auto; 
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px 50px 0px 0px; 
 
     background-color: hsl(270deg 40% 94% / 5%);
     color: var(--text);
     text-align: center;
     padding: 10px;
+    min-height: 3rem;
 }
 
 footer p {
@@ -287,10 +287,6 @@ p {
 
     section {
         margin: 0px 0px 1.5rem 0px;
-    }
-
-    footer {
-        position: static;
     }
 }
 
