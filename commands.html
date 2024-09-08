@@ -1,22 +1,110 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
-        <title>Todo app</title>
+        <title>TotalBan</title>
+        <link rel="icon" type="image/x-icon" href="logo.webp">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="navbar">
-            <div class="logo">logo</div>
+        <header class="navbar sticky">
+            <div class="logo"><img src="logo.webp" alt="TotalBan" class=""><h1>TotalBan Documentation</h1></div>
             <div class="pages">
-                <div><a href="index.html">Home</a></div>
-                <div><a href="changelog.html">Change Log</a></div>
-                <div><a href="commands.html">commands</a></div>
-                <div><a href="legal.html">Legal</a></div>
+                <a class="nav" href="index.html">Home</a>
+                <a class="nav" href="changelog.html">Changelog</a>
+                <a class="nav" href="commands.html">Commands</a>
+                <!-- <a class="nav" href="legal.html">Legal</a> -->
             </div>
-        </div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </header>
+        <main>
+            <div class="left-column">
+                <section class="about-me" style="z-index: 0;">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan suscipit augue lobortis aliquam. Suspendisse varius eros eu eleifend mollis. Nullam a nibh sit amet ipsum tristique eleifend eu ut ante. Aenean interdum nisi nulla, sed facilisis velit scelerisque at.</p>
+                    <p>Vestibulum sed convallis tellus. Etiam vulputate tellus quam, a vestibulum justo tristique quis.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At id odit modi magnam, ratione perferendis deleniti excepturi? Eaque obcaecati quaerat velit ex, temporibus repellendus, molestiae, nam consectetur totam magni perferendis!</p>
+                    <br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus a reiciendis eligendi? Optio quas modi possimus repudiandae iure architecto neque dolorum veritatis necessitatibus quam eveniet nulla, maxime quidem magnam!</p>
+                </section>
+            </div>  
+            <div class="right-column">
+                <section class="important">
+                    <h2>You have a request?</h2>
+                    <a href="https://google.com" class="GitHub"> 
+                        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <title>github</title> <rect fill="none" height="24" width="24"></rect> <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"></path> </g></svg>
+                        Create new GitHub issue! 
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum illo dignissimos eligendi fuga placeat expedita soluta in quis! Id ex in velit natus minima at autem voluptatibus perspiciatis architecto porro?</p>
+                </section>
+                <section class="changelog">
+                    <h2>Latest changelog</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti blanditiis accusantium dicta voluptatem quod, nemo mollitia quis vitae sequi ad quo voluptatibus quam voluptate ratione recusandae beatae dolore eos libero.</p>
+                    <div class="button-container">
+                        <a href="changelog.html">
+                            <button class="cssbuttons-io">
+                                <span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z" fill="currentColor"></path>
+                                    </svg>
+                                    See more changelogs
+                                </span> 
+                            </button>
+                        </a>
+                    </div>  
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="signature">
+                <p>2024 TotalBan. All rights reserved.</p> <!--What is this thing actually called-->
+            </div>
+            <a class="legal" href="legal.html">Legal</a>
+            <div class="social">
+                <a class="discord-link" href="https://discord.gg/puzjdKHH35" style="text-decoration: none;">
+                    <button class="discord">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="40" height="40">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor" d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Discord</span>
+                    </button>
+                </a>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burger = document.querySelector('.burger input');
+                const navMenu = document.querySelector('.pages');
+                
+                if (burger && navMenu) {
+                    burger.addEventListener('change', function() {
+                        if (this.checked) {
+                            navMenu.classList.add('active');
+                        } else {
+                            navMenu.classList.remove('active');
+                        }
+                        console.log('Burger clicked, pages class list:', navMenu.classList);
+                    });
+                } else {
+                    console.error('Burger menu or navigation menu not found');
+                }
+            });
+        </script>
     </body>
 </html>
