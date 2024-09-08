@@ -23,10 +23,15 @@
     --static15: rgba(255, 255, 255, 0.5);
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+h1, h2, h3 {
+    margin: 0 0 1rem 0;
+}
+
+p {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove any padding */
+    text-align: left; /* Ensure text is aligned to the left */
+    max-width: 100%; /* Ensure the paragraph can use the full width */
 }
 
 header {
@@ -35,12 +40,17 @@ header {
     color: var(--text);
 }
 
+/* sticky header */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: 10px;
-    padding: 10px; */
     background-color: var(--background);
     border-bottom: 1px solid var(--static7);
     font-weight: bold;
@@ -80,6 +90,7 @@ header {
     color: var(--text);
 }
 
+/* nav referes to navbar links (dont kill me pls) */
 .nav {
     padding: 28px 18px;
     text-decoration: none;
@@ -175,6 +186,11 @@ header {
     left: 5px;
 }
 
+/* Hide the burger menu by default for all screen sizes */
+.navbar .burger {
+    display: none;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -194,12 +210,6 @@ body {
     width: 25%;
     background-color: #f1f1f1;
     padding-left: 20px;
-}
-
-.container {
-    width: 70%;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -226,7 +236,7 @@ section {
     position: relative;
     padding: 2rem;
     margin: 1.5rem;
-    background: rgba(255, 255, 255, 0.1); /* Light frosted glass effect */
+    background: rgba(255, 255, 255, 0.1); 
     border-radius: 16px; /* Smooth rounded corners */
     backdrop-filter: blur(10px); /* Stronger blur for a frosted glass look */
     -webkit-backdrop-filter: blur(10px); /* For Safari support */
@@ -257,18 +267,6 @@ section p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
 }
 
-.main-content {
-    width: 65%;
-}
-
-/* footer {
-    background-color: var(--primary-500);
-    padding: 1rem;
-    text-align: center;
-    color: var(--text-950);
-    margin-top: 2rem;main
-} */
-
 footer {
     width: 90%; 
     margin: 0 auto; 
@@ -284,18 +282,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
-}
-
-h1, h2, h3 {
-    margin: 0 0 1rem 0;
-}
-
-p {
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove any padding */
-    text-align: left; /* Ensure text is aligned to the left */
-    max-width: 100%; /* Ensure the paragraph can use the full width */
-
 }
 
 .GitHub {
@@ -329,6 +315,7 @@ p {
     box-shadow: none;
 }
 
+/* Attempts to animate navbar but gave up */
 /* .navbar a {
     text-decoration: none;
     color: #ffffff; 
@@ -414,10 +401,6 @@ section.changelog {
 .cssbuttons-io:active {
     transform: scale(0.95);
 }
-/* Hide the burger menu by default for all screen sizes */
-.navbar .burger {
-    display: none;
-}
 
 @media screen and (min-width: 1980px) {
     body {
@@ -481,21 +464,6 @@ section.changelog {
         border-left: 1px solid var(--static7);
     }
 }
-
-/* Styles for viewport width above 768px */
-/* @media screen and (min-width: 769px) {
-    .navbar .pages {
-        display: flex;
-        flex-direction: row;
-        margin-right: 3rem;
-        border-right: 1px solid var(--static7);
-    }
-
-    .navbar .nav {
-        padding: 28px 18px;
-        border-left: 1px solid var(--static7);
-    }
-} */
 
 /* Styles for viewport width 768px and below */
 @media screen and (max-width: 768px) {
