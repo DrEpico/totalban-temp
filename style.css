@@ -112,6 +112,69 @@ header {
     top: 0; /* Slide the background up to fully cover the nav item */
 }
 
+/* From Uiverse.io by Cevorob */ 
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: var(--text);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -235,74 +298,6 @@ p {
 
 }
 
-@media screen and (min-width: 1980px) {
-    body {
-        max-width: 1980px;
-        margin: auto;
-    }
-
-    footer { 
-        max-width: 1980px;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    .logo {
-        align-items: center;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .logo h1 {
-        font-size: 1.2em;
-    }
-
-    .nav {
-        font-size: 1rem;
-    }
-
-    .pages {
-        margin-right: 0px;
-    }
-}
-
-@media (max-width: 800px) {
-    main {
-        flex-direction: column;
-    }
-
-    .leftcolumn, .rightcolumn {   
-        width: 100%;
-        padding: 0;
-    }
-
-    .rightcolumn {
-        margin-top: 1rem; /* Add some spacing between stacked elements */
-    }
-
-    section {
-        margin: 0px 0px 1.5rem 0px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .topnav a {
-        float: none;
-        width: 100%;
-    }
-
-    .logo img {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-/* From Uiverse.io by Yaya12085 */ 
 .GitHub {
     display: flex;
     background-color: rgb(111, 158, 89);
@@ -419,28 +414,61 @@ section.changelog {
 .cssbuttons-io:active {
     transform: scale(0.95);
 }
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.hamburger-menu span {
-    height: 3px;
-    width: 25px;
-    background-color: var(--text);
-    margin: 3px 0;
-    transition: 0.4s;
-}
 /* Hide the burger menu by default for all screen sizes */
 .navbar .burger {
     display: none;
 }
 
-/* Styles for viewport width above 768px */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1980px) {
+    body {
+        max-width: 1980px;
+        margin: auto;
+    }
+    
+    footer { 
+        max-width: 1980px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .logo {
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo h1 {
+        font-size: 1.2em;
+    }
+    
+    .nav {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+    
+    .rightcolumn {
+        margin-top: 1rem; /* Add some spacing between stacked elements */
+    }
+    
+    section {
+        margin: 0px 0px 1.5rem 0px;
+    }
+
     .navbar .pages {
         display: flex;
         flex-direction: row;
@@ -453,6 +481,21 @@ section.changelog {
         border-left: 1px solid var(--static7);
     }
 }
+
+/* Styles for viewport width above 768px */
+/* @media screen and (min-width: 769px) {
+    .navbar .pages {
+        display: flex;
+        flex-direction: row;
+        margin-right: 3rem;
+        border-right: 1px solid var(--static7);
+    }
+
+    .navbar .nav {
+        padding: 28px 18px;
+        border-left: 1px solid var(--static7);
+    }
+} */
 
 /* Styles for viewport width 768px and below */
 @media screen and (max-width: 768px) {
@@ -499,80 +542,14 @@ section.changelog {
     }
 }
 
-/* .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+    
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
 }
-
-.hamburger-menu span {
-    height: 3px;
-    width: 25px;
-    background-color: var(--text);
-    margin: 3px 0;
-    transition: 0.4s;
-} */
-  
-/* From Uiverse.io by Cevorob */ 
-.burger {
-    position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  
-  .burger input {
-    display: none;
-  }
-  
-  .burger span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: var(--text);
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-  
-  .burger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%);
-  }
-  
-  .burger input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
-    opacity: 0;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
-  }
