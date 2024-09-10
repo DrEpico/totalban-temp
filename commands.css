@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --discord-bg: hsl(223, 7%, 21%);
+    --discord-text: hsl(220, 13%, 95%);
+
+        --text: hsl(270, 40%, 94%);
+        --background: hsl(270, 46%, 5%);
+        --primary: hsl(267, 52%, 71%);
+        --secondary: hsl(268, 60%, 32%);
+        --accent: hsl(275, 86%, 36%);
+    
+    
+        --static: rgba(225, 225, 225, 0.5);
+        --static2: #0f0f0f;
+        --static3: rgb(255, 255, 255);
+        --static4: rgba(225, 225, 225, 0.2);
+        --static5: rgb(24, 172, 122);
+        --static6: rgba(0, 0, 0, 0.05);
+        --static7: rgba(105, 96, 79, 0.397);
+        --static8: rgba(0, 0, 0, 0.05);
+        --static9: rgba(0, 0, 0, 0.3);
+        --static10: rgba(225, 225, 225);
+        --static11: rgba(78, 71, 57, 0.473);
+        --static12: rgba(255, 255, 255, 0.8);
+        --static13: rgb(235, 235, 235);
+        --static14: rgba(0, 0, 0, 0.2);
+        --static15: rgba(255, 255, 255, 0.5);
+}
+
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.card-content {
+    border-bottom: 1px solid var(--static) ;
+    padding-bottom: 1rem;
+    width: 90%;
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.card {
+    margin: 0 auto;
+    background-color: var(--static4);
+    border-radius: 8px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+  }
+  
+  .circle {
+    padding: 0 4px;
+  }
+  
+  .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+  }
+  
+  .red {
+    background-color: #ff605c;
+  }
+  
+  .yellow {
+    background-color: #ffbd44;
+  }
+  
+  .green {
+    background-color: #00ca4e;
+  }
+
+  
+  /* From Uiverse.io by Yaya12085 */ 
+.code-editor {
+    max-width: 300px;
+    background-color: #1d1e22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 2px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .title {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+  }
+  
+  .icon {
+    width: 20px;
+    transition: .2s ease;
+  }
+  
+  .icon:hover {
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #6e7281;
+  }
+  
+  .editor-content {
+    margin: 0 10px 10px;
+    color: white;
+  }
+  
+  .property {
+    margin-left: 30px;
+  }
+  
+  .property:hover {
+    cursor: text;
+  }
+  
+  .editor-content .color-0 {
+    color: rgb(86 156 214);
+  }
+  
+  .editor-content .color-1 {
+    color: rgb(182 206 168);
+  }
+  
+  .editor-content .color-2 {
+    color: rgb(156 220 254);
+  }
+  
+  .editor-content .color-3 {
+    color: rgb(207 146 120);
+  }
+  
+  .color-preview-1,.color-preview-2 {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 3px;
+  }
+  
+  .color-preview-1 {
+    background-color: #1d1e22;
+  }
+  
+  .color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  
