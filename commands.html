@@ -31,14 +31,21 @@
             <div class="card">
                 <div class="card-content">
                     <h2>Ban</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">Ban a member from the server</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/ban <span class="required">&lt;User*&gt; </span><span class="optional">&lt;Reason&gt; </span><span class="optional">&lt;Delete&gt;</span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">Ban a member from the server</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to ban (required*)</p></span>
+                    <span class="param"><h4>Reason</h4><p>(Text) - The reason to ban the user for (optional)</p></span>
+                    <span class="param"><h4>Delete</h4><p>(Text) - The number of days of the user's messages to delete (optional)</p></span>
                     
                 </div>
                 <div class="card-content">
                     <h2>Check</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">View a global ban for a user or lookup a specific ban</p>
+                    <p class="param space-mono-regular">/ban <span class="required">id </span><span class="optional">reason </span><span class="optional">delete </span></p>
+                    <p class="descrip">View a global ban for a user or lookup a specific ban</p>
+                    <p class="perms">Ban Members</p>
                 </div>
                 <div class="card-content">
                     <h2>Kick</h2>

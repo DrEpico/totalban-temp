@@ -85,16 +85,51 @@ main {
     margin: 0em auto;
 }
 
-h2 {
-    margin: 1rem;
+h2,h3 {
+    margin: 0rem 1rem 1rem 1rem; 
+}
+
+h4  {
+    margin: 0rem 1rem 1rem 1rem; 
+    /* 2rem for left margin would work too */
+}
+
+h3, p {
+    margin-bottom: 1rem;
+}
+
+span {
+    margin: 0px;
+}
+
+.command {
+    margin-left: 1rem;
+    padding: 3px;
+    background-color: hsl(225, 7%, 24%);
+    border: 1px solid var(--static4);
+    border-radius: 5px;
+    width: 90%;
 }
 
 .param {
-    margin-left: 1rem;
+    
+    display: flex; align-items: center;
 }
 
 .descrip {
     margin-left: 1rem;
+}
+
+.perms {
+    margin-left: 1rem;
+}
+
+.required {
+    color:#ff605c
+}
+
+.optional {
+
 }
 
 
