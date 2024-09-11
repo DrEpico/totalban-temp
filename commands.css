@@ -125,7 +125,7 @@ span {
 }
 
 .required {
-    color:#ff605c
+  color:#ff605c
 }
 
 .optional {
@@ -164,35 +164,35 @@ span {
     background-color: #00ca4e;
   }
 
-  /* From Uiverse.io by Yaya12085 */ 
-.guthub {
-    display: flex;
-    background-color: rgb(24, 23, 23);
-    color: #ffffff;
-    padding: 0.5rem 1.4rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-    text-align: center;
-    vertical-align: middle;
-    align-items: center;
-    border-radius: 0.5rem;
-    gap: 0.75rem;
-    border: none;
+  .issue-link {
     cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: .6s ease;
+    display: flex;
+    gap: 0.5rem;
+    border: none;
+  
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+    place-content: center;
+  
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1rem;
+  
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
   }
   
-  .github svg {
-    height: 30px;
+  .issue-link:hover {
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #e6d952;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  .github:hover {
-    box-shadow: none;
-  }
- 
-  
 
   @media (max-width: 1980) {
     body {
