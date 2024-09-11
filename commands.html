@@ -27,6 +27,7 @@
             </label>
         </header>
         <main class="card-container">
+            <!-- <h1 class="space-mono-bold">Commands</h1> -->
             <div class="card-container"></div>
             <div class="card">
                 <div class="card-content">
@@ -39,54 +40,105 @@
                     <span class="param"><h4>User</h4><p>(Mention or ID) - The user to ban (required*)</p></span>
                     <span class="param"><h4>Reason</h4><p>(Text) - The reason to ban the user for (optional)</p></span>
                     <span class="param"><h4>Delete</h4><p>(Text) - The number of days of the user's messages to delete (optional)</p></span>
-                    
                 </div>
                 <div class="card-content">
                     <h2>Check</h2>
-                    <p class="param space-mono-regular">/ban <span class="required">id </span><span class="optional">reason </span><span class="optional">delete </span></p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/check &lt;ID&gt; </span><span class="optional">&lt;User&gt; </span></p>
+                    <h3>Description</h3>
                     <p class="descrip">View a global ban for a user or lookup a specific ban</p>
-                    <p class="perms">Ban Members</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>ID</h4><p>(Text) - The ban ID (optional. required if user is missing)</p></span>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to check for (optional. required if id is missing)</p></span>
+                </div>
+                <div class="card-content">
+                    <h2>Info</h2>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/info</p>
+                    <h3>Description</h3>
+                    <p class="descrip space-mono-regular">View the bot's information</p>
                 </div>
                 <div class="card-content">
                     <h2>Kick</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">Kick a member from the server</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/kick <span class="required">&lt;User*&gt; </span><span class="optional">&lt;Reason&gt; </span><span class="optional">&lt;Delete&gt;</span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">Kick a member from the server</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p> (Mention or ID) - The user to ban (required*)</p></span>
+                    <span class="param"><h4>Reason</h4><p>(Text) - The reason to ban the user for (optional)</p></span>
+                    <h3>Perms</h3>
+                    <span class="perms"><p>Kick Members</p></span>
                 </div>
                 <div class="card-content">
                     <h2>Purge</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">Clear a channel of messages</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/purge <span class="required">&lt;User*&gt; </span><span class="optional">&lt;Reason&gt; </span><span class="optional">&lt;Delete&gt;</span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">Clear a channel of messages</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to remove messages for (optional)</p></span>
+                    <span class="param"><h4>Count</h4><p>(Number) - The number of messages to delete (required*. max value 100)</p></span>
+                    <h3>Perms</h3>
+                    <span class="perms"><p>Manage Messages</p></span>
                 </div>
                 <div class="card-content">
                     <h2>Timeout</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">Timeout a member</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/timeout <span class="required">&lt;User*&gt; </span><span class="required">&lt;Time*&gt; </span><span class="optional">&lt;Reason&gt;</span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">Timeout a member</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to timeout (required*)</p></span>
+                    <span class="param"><h4>Time</h4><p>(Text) - How long to timeout the member for (required*)</p></span>
+                    <span class="param"><h4>Reason</h4><p>(Text) - The reason for the timeout (optional)</p></span>
+                    <h3>Perms</h3>
+                    <span class="perms"><p>Moderate Members</p></span>
                 </div>
                 <div class="card-content">
                     <h2>Unban</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">Unban a user from the server</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/unban <span class="required">&lt;User*&gt; </span><span class="required">&lt;Time*&gt; </span><span class="optional">&lt;Reason&gt;</span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">Unban a user from the server</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to unban (required*)</p></span>
+                    <span class="param"><h4>Reason</h4><p>(Text) - The reason to ban the user for (optional)</p></span>
+                    <h3>Perms</h3>
+                    <span class="perms"><p>Ban Members</p></span>
                 </div>
                 <div class="card-content">
                     <h2>Untimeout</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">Untimeout a user</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/untimeout <span class="required">&lt;User*&gt; </span><span class="optional">&lt;Reason&gt;</span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">Unban a user from the server</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to unban (required*)</p></span>
+                    <span class="param"><h4>Reason</h4><p>(Text) - The reason for the untimeout (optional)</p></span>
+                    <h3>Perms</h3>
+                    <span class="perms"><p>Moderate Members</p></span>
                 </div>
                 <div class="card-content">
                     <h2>Whois</h2>
-                    <p class="param"></p>
-                    <p class="descrip space-mono-regular">View information about a user or bot</p>
+                    <h3>Command</h3>
+                    <p class="command space-mono-regular">/whois <span class="optional">&lt;User&gt; </span></p>
+                    <h3>Description</h3>
+                    <p class="descrip">View information about a user or bot</p>
+                    <h3>Parameter Details</h3>
+                    <span class="param"><h4>User</h4><p>(Mention or ID) - The user to view info for (optional)</p></span>
                 </div>
                 
                 <div class="card-content" style="border: none;">
-                    <p class="descrip space-mono-regular">And more...</p>
+                    <p class="descrip space-mono-regular">And working on more...</p>
                 </div>
                 
               </div> 
               <div class="card">
-                    <div class="card-content" style="border: none;"><h2 class="space-mono-bold">Suggestion?</h2>
+                    <div class="card-content" style="border: none;"><h2 class="space-mono-bold">Ideas?</h2>
                     <p class="param"></p>
-                    <p class="descrip space-mono-regular" >There are more commands but I don't have the details yet xd</p></div>
+                    <p class="descrip" >We would love to hear your suggentions!</p></div>
+                    <a href="https://github.com/DeathHound6/totalban-docs/issues/new"><button class="issue-link">Create an issue</button></a>
             </div>
         </main>
         <footer>

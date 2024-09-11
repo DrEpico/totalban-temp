@@ -82,7 +82,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0em auto;
+    margin: 0.5rem auto;
 }
 
 h2,h3 {
@@ -90,7 +90,7 @@ h2,h3 {
 }
 
 h4  {
-    margin: 0rem 1rem 1rem 1rem; 
+    margin: 0rem 1rem 1rem 2rem; 
     /* 2rem for left margin would work too */
 }
 
