@@ -24,6 +24,14 @@
     --static15: rgba(255, 255, 255, 0.5);
 }
 
+[data-theme="light"] {
+    --text: hsl(280, 20%, 3%);
+    --background: hsl(260, 27%, 98%);
+    --primary: hsl(272, 64%, 15%);
+    --secondary: hsl(272, 49%, 70%);
+    --accent: hsl(272, 64%, 85%);
+}
+
 h1, h2, h3 {
     margin: 0 0 1rem 0;
 }
@@ -39,18 +47,16 @@ header {
     background-color: var(--background);
     text-align: center;
     color: var(--text);
-    width: 100vw;
+    /* gap: 10px; */
 }
 
 /* sticky header */
 .sticky {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 0; 
 }
 
 .navbar {
-    margin-left: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +99,6 @@ header {
 .pages {
     display: flex;
     gap: 1rem;
-    /* margin-right: 6rem; */
 }
 
 .pages div a {
@@ -610,7 +615,6 @@ input:checked + .slider:before {
     .navbar .pages {
         display: flex;
         flex-direction: row;
-        margin-right: 3rem;
     }
 
     .navbar .nav {
@@ -668,7 +672,7 @@ input:checked + .slider:before {
     }
 
     .burger {
-        margin-right: 4em;
+        margin-right: 2em;
     }
 }
 
