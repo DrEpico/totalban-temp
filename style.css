@@ -39,6 +39,7 @@ header {
     background-color: var(--background);
     text-align: center;
     color: var(--text);
+    width: 100vw;
 }
 
 /* sticky header */
@@ -49,79 +50,72 @@ header {
 }
 
 .navbar {
+    margin-left: auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    background-color: var(--background);
-    border-bottom: 1px solid var(--static7);
-    font-weight: bold;
-
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary);
     position: sticky;
     top: 0;
-    z-index: 1000; /* High value to ensure it's above other elements */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .logo {
     display: flex;
-    text-align: center;
-    margin: 15px 0px 15px 3rem;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
 }
 
 .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
     border-radius: 50%;
-    width: 50px;
+    border: 2px solid var(--primary);
 }
 
 .logo h1 {
-    font-size: 1.7rem;
-    margin: auto;
-    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
 }
 
 .pages {
     display: flex;
-    flex-direction: row;
-    margin-right: 3rem;
-    border-right: 1px solid var(--static7);
+    gap: 1rem;
+    /* margin-right: 6rem; */
 }
 
 .pages div a {
     height: 100%;
     text-decoration: none;
     color: var(--text);
+    
 }
 
-/* nav referes to navbar links (dont kill me pls) */
 .nav {
-    padding: 28px 18px;
+    color: var(--text);
     text-decoration: none;
-    color: #ffffff; 
-    font-size: 1.1rem; 
+    font-size: 1rem;
     font-weight: 600;
-
-    position: relative;
-    border-left: 1px solid var(--static7);
-    display: inline-block;
-    z-index: 1; /* Ensure the text stays above the background */
-
-    /* Background Transition */
-    overflow: hidden;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.nav::before {
-    content: "";
-    position: absolute;
-    top: 100%; /* Start the background off-screen (bottom) */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--static4); /* Background color */
-    z-index: -1; /* Place the background behind the text */
-    transition: top 0.4s ease; /* Transition for sliding effect */
-}
-
-.nav:hover::before {
-    top: 0; /* Slide the background up to fully cover the nav item */
+.nav:hover {
+    background-color: var(--primary);
+    color: var(--background);
 }
 
 /* From Uiverse.io by Cevorob */ 
@@ -564,17 +558,20 @@ section.changelog {
         display: flex;
         flex-direction: row;
         margin-right: 3rem;
-        border-right: 1px solid var(--static7);
     }
 
     .navbar .nav {
-        padding: 28px 18px;
+        padding: 15px 18px;
         border-left: 1px solid var(--static7);
     }
 }
 
 /* Styles for viewport width 768px and below */
 @media screen and (max-width: 768px) {
+    /* header {
+        padding: 1rem;
+    } */
+    
     .navbar {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -593,6 +590,10 @@ section.changelog {
         display: block; /* Show the burger menu */
         order: 2; /* This ensures the burger stays on the right */
     }
+
+    /* .pages {
+        gap: 0;
+    } */
 
     .navbar .pages {
         display: none;
@@ -614,7 +615,7 @@ section.changelog {
     }
 
     .burger {
-        margin-right: 2em;
+        margin-right: 4em;
     }
 }
 

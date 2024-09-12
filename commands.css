@@ -37,7 +37,7 @@ h2,h3 {
 
 h4  {
   margin: 0rem 1rem 1rem 2rem; 
-  /* 2rem for left margin would work too */
+  /* 1rem for left margin would work too */
 }
 
 h3, p {
