@@ -1,8 +1,45 @@
+:root {
+    --text: hsl(270, 40%, 94%);
+    --background: hsl(270, 46%, 5%);
+    --primary: hsl(267, 52%, 71%);
+    --secondary: hsl(268, 60%, 32%);
+    --accent: hsl(275, 86%, 36%);
+
+
+    --static: rgba(225, 225, 225, 0.5);
+    --static2: #0f0f0f;
+    --static3: rgb(255, 255, 255);
+    --static4: rgba(225, 225, 225, 0.2);
+    --static5: rgb(24, 172, 122);
+    --static6: rgba(0, 0, 0, 0.05);
+    --static7: rgba(105, 96, 79, 0.397);
+    --static8: rgba(0, 0, 0, 0.05);
+    --static9: rgba(0, 0, 0, 0.3);
+    --static10: rgba(225, 225, 225);
+    --static11: rgba(78, 71, 57, 0.473);
+    --static12: rgba(255, 255, 255, 0.8);
+    --static13: rgb(235, 235, 235);
+    --static14: rgba(0, 0, 0, 0.2);
+    --static15: rgba(255, 255, 255, 0.5);
+
+    --card-bg-color: hsl(267, 22%, 10%);
+    --card-hover-bg-color: hsl(273, 15%, 15%);
+}
+
+[data-theme="light"] {
+    --text: hsl(280, 20%, 3%);
+    --background: hsl(260, 27%, 98%);
+    --primary: hsl(272, 64%, 15%);
+    --secondary: hsl(272, 49%, 70%);
+    --accent: hsl(272, 64%, 85%);
+}
+
 main {
     flex-direction: column;
     width: 90%;
     max-width: 1200px;
-    margin: 2rem auto;
+    padding: 0px;
+    margin: 4rem auto;
 }
 
 .log-card {
@@ -19,6 +56,9 @@ main {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    .commit-icon{
+        background-color: var(--card-hover-bg-color);
+    }
 }
 
 .meta {
@@ -27,6 +67,7 @@ main {
     flex-direction: column;
     padding-right: 2rem;
     border-right: 1px solid var(--primary);
+    position: relative;
 }
 
 .version {
@@ -53,9 +94,32 @@ main {
     letter-spacing: 1px;
 }
 
+/* .commit-icon {
+    position: absolute;
+    right: -14px;
+    bottom: 0;
+    background-color: var(--background);
+    border-radius: 50%;
+    padding: 2px;
+    z-index: 1;
+} */
+
+.commit-icon {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    right: -14.5px;
+    top: -2px;
+    background-color: var(--card-bg-color);
+    /* background-color: color-mix(in hsl,var(--background),rgba(255, 255, 255)); */
+    border-radius: 50%;
+    padding: 0px;
+    z-index: 1;
+}
+
 .details {
     width: 70%;
-    padding-left: 2rem;
+    padding-left: 2rem;  
 }
 
 .details p {
@@ -65,7 +129,26 @@ main {
 }
 
 /* Responsive Design */
+
+@media screen and (max-width: 800px){
+    
+}
+
 @media screen and (max-width: 768px) {
+
+    .commit-icon {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        left: 0px;
+        top: 100px;
+        background-color: var(--card-bg-color);
+        /* background-color: color-mix(in hsl,var(--background),rgba(255, 255, 255)); */
+        border-radius: 50%;
+        padding: 0px;
+        z-index: 1;
+    }
+    
     .log-card {
         flex-direction: column;
     }
