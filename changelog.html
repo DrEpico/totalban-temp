@@ -18,12 +18,10 @@
                 <a class="nav" href="index.html">Home</a>
                 <a class="nav" href="changelog.html">Changelog</a>
                 <a class="nav" href="commands.html">Commands</a>
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                    </label>
-                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
                 <!-- <a class="nav" href="legal.html">Legal</a> -->
             </div>
             <label class="burger" for="burger">
@@ -109,7 +107,9 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const burger = document.querySelector('.burger input');
                 const navMenu = document.querySelector('.pages');
-                
+                const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+                // Burger menu functionality
                 if (burger && navMenu) {
                     burger.addEventListener('change', function() {
                         if (this.checked) {
@@ -117,34 +117,40 @@
                         } else {
                             navMenu.classList.remove('active');
                         }
-                        console.log('Burger clicked, pages class list:', navMenu.classList);
                     });
                 } else {
                     console.error('Burger menu or navigation menu not found');
                 }
-            });
 
-            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-            function switchTheme(e) {
-                if (e.target.checked) {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
+                // Theme toggle functionality
+                function switchTheme(e) {
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                    }
+                }
+
+                // Add event listener for theme toggle switch
+                if (toggleSwitch) {
+                    toggleSwitch.addEventListener('change', switchTheme, true);
                 } else {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                }    
-            }
-            toggleSwitch.addEventListener('change', switchTheme, false);
-            // Check for saved user preference, if any, on load of the website
-            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+                    console.error('Theme toggle switch not found');
+                }
 
-            if (currentTheme) {
+                // Check for saved theme and apply it
+                const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
                 document.documentElement.setAttribute('data-theme', currentTheme);
 
-                if (currentTheme === 'light') {
+                // Ensure the switch reflects the correct theme status
+                if (currentTheme === 'dark' && toggleSwitch) {
                     toggleSwitch.checked = true;
+                } else if (currentTheme === 'light' && toggleSwitch) {
+                    toggleSwitch.checked = false;
                 }
-            }
+            });
         </script>
     </body>
 </html>

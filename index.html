@@ -91,55 +91,53 @@
             </div>
         </footer>
         <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const burger = document.querySelector('.burger input');
-        const navMenu = document.querySelector('.pages');
-        const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+            document.addEventListener('DOMContentLoaded', function() {
+                const burger = document.querySelector('.burger input');
+                const navMenu = document.querySelector('.pages');
+                const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 
-        // Burger menu functionality
-        if (burger && navMenu) {
-            burger.addEventListener('change', function() {
-                if (this.checked) {
-                    navMenu.classList.add('active');
+                // Burger menu functionality
+                if (burger && navMenu) {
+                    burger.addEventListener('change', function() {
+                        if (this.checked) {
+                            navMenu.classList.add('active');
+                        } else {
+                            navMenu.classList.remove('active');
+                        }
+                    });
                 } else {
-                    navMenu.classList.remove('active');
+                    console.error('Burger menu or navigation menu not found');
+                }
+
+                // Theme toggle functionality
+                function switchTheme(e) {
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                    }
+                }
+
+                // Add event listener for theme toggle switch
+                if (toggleSwitch) {
+                    toggleSwitch.addEventListener('change', switchTheme, true);
+                } else {
+                    console.error('Theme toggle switch not found');
+                }
+
+                // Check for saved theme and apply it
+                const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+                document.documentElement.setAttribute('data-theme', currentTheme);
+
+                // Ensure the switch reflects the correct theme status
+                if (currentTheme === 'dark' && toggleSwitch) {
+                    toggleSwitch.checked = true;
+                } else if (currentTheme === 'light' && toggleSwitch) {
+                    toggleSwitch.checked = false;
                 }
             });
-        } else {
-            console.error('Burger menu or navigation menu not found');
-        }
-
-        // Theme toggle functionality
-        function switchTheme(e) {
-            if (e.target.checked) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        // Add event listener for theme toggle switch
-        if (toggleSwitch) {
-            toggleSwitch.addEventListener('change', switchTheme, true);
-        } else {
-            console.error('Theme toggle switch not found');
-        }
-
-        // Check for saved theme and apply it
-        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-
-        // Ensure the switch reflects the correct theme status
-        if (currentTheme === 'dark' && toggleSwitch) {
-            toggleSwitch.checked = true;
-        } else if (currentTheme === 'light' && toggleSwitch) {
-            toggleSwitch.checked = false;
-        }
-    });
-
-
         </script>
     </body>
 </html>
