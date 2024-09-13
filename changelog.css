@@ -28,6 +28,8 @@
     --card-hover-bg-color: hsl(273, 15%, 15%);
 
     --tag-color: hsl(275, 86%, 36%);
+
+    --commit-svg-bg: hsl(267, 22%, 10%);
 }
 
 [data-theme="light"] {
@@ -41,6 +43,8 @@
     --card-hover-bg-color: hsl(273, 52%, 78%);
 
     --tag-color: hsl(272, 49%, 70%);
+
+    --commit-svg-bg: hsl(240, 5%, 93%);
 }
 
 .space-mono-regular {
@@ -143,7 +147,7 @@ main {
     height: 28px;
     right: -14.5px;
     top: -2px;
-    background-color: var(--card-bg-color);
+    background-color: var(--commit-svg-bg);
     border-radius: 50%;
     padding: 0px;
     z-index: 1;
