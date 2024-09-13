@@ -220,12 +220,17 @@ span {
 
 @media (max-width: 1200px) {
   main {
-    padding: 0rem 10rem;
+    padding: 0rem 8rem;
   }
 }
 
 @media (max-width: 800px) {
   main {
     padding: 1rem;
+  }
+
+  h4  {
+    margin: 0rem 1rem 1rem 1rem; 
+    /* 1rem for left margin would work too */
   }
 }
