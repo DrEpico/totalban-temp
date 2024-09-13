@@ -37,7 +37,7 @@
     --secondary: hsl(272, 49%, 70%);
     --accent: hsl(272, 64%, 85%);
 
-    --card-bg-color: hsl(272, 64%, 85%);
+    --card-bg-color: rgba(182, 182, 182, 0.2);
     --card-hover-bg-color: hsl(273, 52%, 78%);
 
     --tag-color: hsl(272, 49%, 70%);
