@@ -22,6 +22,12 @@
     --static13: rgb(235, 235, 235);
     --static14: rgba(0, 0, 0, 0.2);
     --static15: rgba(255, 255, 255, 0.5);
+
+    --card-bg-color: rgba(255, 255, 255, 0.1);
+
+    --github-svg-bg: rgb(111, 158, 89);
+
+    --nav-hover: hsl(267, 52%, 71%);
 }
 
 [data-theme="light"] {
@@ -30,6 +36,10 @@
     --primary: hsl(272, 64%, 15%);
     --secondary: hsl(272, 49%, 70%);
     --accent: hsl(272, 64%, 85%);
+
+    --card-bg-color: rgba(182, 182, 182, 0.2);
+
+    --github-svg-bg: hsl(272, 49%, 70%);
 }
 
 .space-mono-regular {
@@ -95,7 +105,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--card-bg-color); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--primary);
@@ -106,7 +116,10 @@ header {
 }
 
 .navbar:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(216, 216, 216, 0.1);
+    .slider {
+        background-color: rgba(102, 86, 86, 0.1);
+    }
 }
 
 .logo {
@@ -153,7 +166,7 @@ header {
 }
 
 .nav:hover {
-    background-color: var(--primary);
+    background-color: var(--nav-hover);
     color: var(--background);
 }
 
@@ -270,7 +283,7 @@ section {
     position: relative;
     padding: 2rem;
     margin: 1.5rem;
-    background: rgba(255, 255, 255, 0.1); 
+    background: var(--card-bg-color); 
     border-radius: 16px; /* Smooth rounded corners */
     backdrop-filter: blur(10px); /* Stronger blur for a frosted glass look */
     -webkit-backdrop-filter: blur(10px); /* For Safari support */
@@ -279,13 +292,13 @@ section {
 }
 
 section h2 {
-    color: #ffffff; 
+    color: var(--text);
     font-size: 1.5rem; 
     margin-bottom: 1rem;
 }
 
 section p {
-    color: rgba(255, 255, 255, 0.85); /* Light grey for the paragraph text */
+    color: var(--text);; /* Light grey for the paragraph text */
     line-height: 1.6; /* Increase line height for better readability */
 }
 
@@ -307,7 +320,7 @@ section p {
 
 .GitHub {
     display: flex;
-    background-color: rgb(111, 158, 89);
+    background-color: var(--github-svg-bg);
     color: #ffffff;
     padding: 0.5rem 2rem;
     font-size: 0.875rem;
@@ -459,7 +472,7 @@ section.changelog {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f4f4f5;
+    background-color: var(--background);
     transition: .4s;
     border-radius: 30px;
   }

@@ -26,6 +26,8 @@
 
     --card-bg-color: hsl(267, 22%, 10%);
     --card-hover-bg-color: hsl(273, 15%, 15%);
+
+    --tag-color: hsl(275, 86%, 36%);
 }
 
 [data-theme="light"] {
@@ -34,6 +36,11 @@
     --primary: hsl(272, 64%, 15%);
     --secondary: hsl(272, 49%, 70%);
     --accent: hsl(272, 64%, 85%);
+
+    --card-bg-color: hsl(272, 64%, 85%);
+    --card-hover-bg-color: hsl(273, 52%, 78%);
+
+    --tag-color: hsl(272, 49%, 70%);
 }
 
 .space-mono-regular {
@@ -71,7 +78,7 @@ main {
 .log-card {
     display: flex;
     flex-direction: row;
-    background: rgba(255, 255, 255, 0.05);
+    background:  var(--card-bg-color);
     border-radius: 10px;
     margin-bottom: 2rem;
     padding: 2rem;
@@ -79,7 +86,7 @@ main {
 }
 
 .log-card:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--card-hover-bg-color);
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     .commit-icon{
@@ -111,7 +118,7 @@ main {
 
 .tag {
     display: inline-block;
-    background-color: var(--accent);
+    background-color: var(--tag-color);
     color: var(--text);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
